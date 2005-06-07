@@ -1,8 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/
 DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv"> 
-<!-- index.php Version 0.3.5 Copyright (C) Niklas Lindblad and Patrik Nilsson 2005
-Released under the GNU General Public License version 2
+<!-- 
+  index.php 
+  Version 0.3.5 
+  Copyright (C) Niklas Lindblad and Patrik Nilsson 2005
+  Released under the GNU General Public License version 2
 -->
 <?php
 /*Include zer.php, the file that contains variables and settings */
