@@ -1,0 +1,31 @@
+CHANGELOG for flagbag version 0.5 => 0.5.1
+==========================================
+
+* Cleaned up most of the files and added
+  more comments to explain the code itself.
+
+* Re-designed the logger_silent module
+  it should now function better.
+
+CHANGELOG for flagbag version 0.4.2 => 0.5
+==========================================
+
+* Fixed minor bugs with un-valid XHTML 1.1-code.
+
+   o /modules/simple_menu.php fixed
+
+   o /log.php fixed
+ 
+ 
+* Added a new sofisticated module-system.
+
+   o Created module: logger_silent
+  
+   o Created module: simpel_menu
+
+
+* Since logger_silent was created from old code, it
+  has gone through some re-design, added the $browser
+  variable to log the visitors browser aswell.
+
+* blambi did some über-hacking with the modules.
