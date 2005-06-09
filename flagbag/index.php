@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11
-DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv"> 
 <!-- 
   index.php 
@@ -7,26 +6,30 @@ DTD/xhtml11.dtd">
   Released under the GNU General Public License version 2
 -->
 <?php
-/*Include zer.php, the file that contains variables and settings */
-/* Although we only load it if it exists */
- if ( file_exists('php/zer.php') ) 
-	 include 'php/zer.php'
- ?>
- <?php
- /* We also include the silent modules */
- if ( file_exists('modules/silent_mod.php') )
-	 include 'modules/silent_mod.php'
-?>
 
-<?php
-	/* Read some variables who could be modified by for example plugins */
+  /* MAKE INCLUDES */
+
+  /* zer.php holds all our variables and data */
+  /* If it exists we'll include it */
+      if ( file_exists('php/zer.php') ) 
+         include 'php/zer.php'
+
+  /* We also include the silent modules */
+      if ( file_exists('modules/silent_mod.php') )
+	 include 'modules/silent_mod.php'
+
+  /* ENABLE THE MIN/MAX-FUNCTION */
+
+  /* Read some variables who could be modified by for example plugins */
 	$get_max=$_GET['max'];
 	$get_min=$_GET['min'];
+
+  /* The real HTML-code starts below, remember that <html> is already opened */
 ?>
     
 <head>
-  <title><?php echo $title ?></title>
-<link rel="stylesheet" type="text/css" href="<?php /* Load CSS */ echo $style_sheet ?>" title="layout" />
+  <title><?php /* Print title */ echo $title; ?></title>
+<link rel="stylesheet" type="text/css" href="<?php /* Set CSS */ echo $style_sheet; ?>" title="layout" />
       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
 </head>
 	<body>
@@ -42,24 +45,30 @@ DTD/xhtml11.dtd">
  }
  ?>
 
-    <p id="date"><b> <?php
-/* Echo the date to the sub-header */
- echo $now ?> </b></p>
+    <p id="date"><b> <?php /* Print date */ echo $now; ?> </b></p>
 <hr />
 <?php
-	/* Menu modules these little guys do some nice menu thingies :) */
+  /* MENU-MODULES */
+
+	/* If the menu_mod exists load it (displays a menu at the top of the page */
 	if ( file_exists('modules/menu_mod.php') ) {
 		include 'modules/menu_mod.php';
 	}
 ?>
 <?php
-/* Articles are stored in files named blog<nr> they need to include their own formatting. */
+ 
+  /* BLOG-ARTICLES PRINTING */
+
+  /* Articles are stored in files named blog<nr> they need to include their own formatting. */
+
+  /* If 'containt/last.blog' exists then make the last blog-article to last.blog instead */
    if (file_exists("contain/last.blog") ) {
 	   $lastnr = file("contain/last.blog");
 	   $max = ereg_replace("\n", "", $lastnr[0]);
 	   if ($max>16) {
 		   $min=$max-16;
 	   }
+  /* Else, don't and set $min to 0 */
 	   else {
 		   $min=0;
 	   }
