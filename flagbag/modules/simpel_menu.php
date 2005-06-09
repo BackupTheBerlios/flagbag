@@ -9,5 +9,4 @@
   
   /* DECLARE ELEMENTS THATS SHOULD BE USED */
 	/* echo "<p><i>Menu</i></p>\n"; */
-	/* echo "<hr />"; */
 ?>

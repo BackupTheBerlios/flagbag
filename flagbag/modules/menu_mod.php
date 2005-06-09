@@ -10,4 +10,5 @@
         
         /* DECLARED MENUS TO BE USED */        
 	include 'simpel_menu.php'; /* A simple top-element menu */
+	/* echo "<hr />"; */ // Example delimiter
 ?>
