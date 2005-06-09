@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11
 DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv"> 
 <!-- 
   index.php 
-  Version 0.3.5 
   Copyright (C) Niklas Lindblad and Patrik Nilsson 2005
   Released under the GNU General Public License version 2
 -->
@@ -20,7 +19,7 @@ DTD/xhtml11.dtd">
 ?>
 
 <?php
-	/* Read some variables who could be modified by for exampel plugins */
+	/* Read some variables who could be modified by for example plugins */
 	$get_max=$_GET['max'];
 	$get_min=$_GET['min'];
 ?>
@@ -33,14 +32,19 @@ DTD/xhtml11.dtd">
 	<body>
 	<p id="title"><b><?php
 /* Set the page-title and the heading to the value of $title which is a legacy of zer.php */
+/* If we don't use a logo print the title */
  if ($use_logo!=1) {
 	 echo "$title</b></p>";
  }
  else {
+/* Else (if we use a logo) print the HTML-code to include it */
 	 echo "<img src=\"./img/logo.png\" alt=\".".$title."\"></img></b></p>";
  }
  ?>
-    <p id="date"><b> <?php echo $now ?> </b></p>
+
+    <p id="date"><b> <?php
+/* Echo the date to the sub-header */
+ echo $now ?> </b></p>
 <hr />
 <?php
 	/* Menu modules these little guys do some nice menu thingies :) */
