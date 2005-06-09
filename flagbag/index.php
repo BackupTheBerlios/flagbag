@@ -18,7 +18,12 @@ DTD/xhtml11.dtd">
  if ( file_exists('modules/silent_mod.php') )
 	 include 'modules/silent_mod.php'
 ?>
-      
+
+<?php
+	/* Read some variables who could be modified by for exampel plugins */
+	$get_max=$_GET['max'];
+	$get_min=$_GET['min'];
+?>
     
 <head>
   <title><?php echo $title ?></title>
@@ -59,7 +64,17 @@ DTD/xhtml11.dtd">
 	   $max = 16;
 	   $min = 0;
    }
-   
+
+   if (($get_max) && ($get_min)) {
+	/* If the get_max and $get_min exists then these values would
+	   Over run the "default" $max and $min, but only if $get_max IS larger
+	   or the same size as $get_min. */
+	   if ($get_max >= $get_min) {
+		   $max = $get_max;
+		   $min = $get_min;
+	   }
+   }
+
    for ( $numb = $max ; $numb >= $min ; $numb-- ) {
 	   if (file_exists("contain/blog$numb") ) {
 		   $lines5 = file("contain/blog$numb");
