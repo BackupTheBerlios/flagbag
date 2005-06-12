@@ -32,29 +32,23 @@
 <link rel="stylesheet" type="text/css" href="<?php /* Set CSS */ echo $style_sheet; ?>" title="layout" />
       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
 </head>
-	<body>
-	<p id="title"><b><?php
-/* Set the page-title and the heading to the value of $title which is a legacy of zer.php */
-/* If we don't use a logo print the title */
- if ($use_logo!=1) {
-	 echo "$title</b></p>";
- }
- else {
-/* Else (if we use a logo) print the HTML-code to include it */
-	 echo "<img src=\"./img/logo.png\" alt=\".".$title."\"></img></b></p>";
- }
- ?>
-
-    <p id="date"><b> <?php /* Print date */ echo $now; ?> </b></p>
-<hr />
-<?php
-  /* MENU-MODULES */
-
-	/* If the menu_mod exists load it (displays a menu at the top of the page */
-	if ( file_exists('modules/menu_mod.php') ) {
-		include 'modules/menu_mod.php';
-	}
-?>
+	
+<body>
+<div id="container">
+<!-- Title and menu -->
+<div id="header">
+<div id="title">
+<?php /* Echo title */
+echo $title; ?>
+</div>
+<div id="date">
+<?php /* Echo date */
+echo $now; ?>
+</div>
+</div>
+<!-- End -->
+<!-- Text -->
+<div id="text">
 <?php
  
   /* BLOG-ARTICLES PRINTING */
@@ -97,9 +91,13 @@
 	   }
    }	       
 ?>
-<hr />
-<p id="version"><?php echo $tag ?> using <?php echo $php_version ?></p>
-<p id="valid"><i>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux.rwarforums.com/blog/utveckling/css/layout.css">CSS</a></i></p>
-<p id="locale"><?php echo $client ?></p>
+</div>
+<!-- Footer -->
+<div id="footer">
+<?php echo $tag ?> using <?php echo $php_version ?>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux.rwarforums.com/blog/utveckling/css/layout.css">CSS</a>
+</div>
+<!-- End -->
+</div>
+
 </body>
 </html>

@@ -1,71 +1,71 @@
    /*
    layout.css
-   Version 0.5
    Copyright (C) 2005
    Niklas Lindblad <niklas.lindblad@gmail.com>
    Patrik Nilsson  <putte@home.frozentux.net>
+   Andreas Falck
    Released under the GNU General Public License version 2
   */
+#container {
+	width: 800px;
+	position: relative;
+	left: 50%;
+	margin-bottom: 5px;
+	margin-left: -400px;
+	float: left;
+	padding: 0px;
+	border: 1px solid #404040;
+}
+#header {
+	width: 100%;
+	height: 48px;
+	background-color: silver;
+}
+#title {
+	width: 100%;
+	height: 28px;
+	text-align: center;
+	background-color: silver;
+	overflow: auto;
+	font-size: 20px;
+	font-family: "Verdana", "Tahoma", sans-serif;
+	border-bottom: 1px solid #404040;
+}
+#date {
+	width: 100%;
+	height: 18px;
+	text-align: center;
+	background-color: silver;
+	overflow: auto;
+	font-size: 12px;
+	font-family: "Verdana", "Tahoma", sans-serif;
+	border-bottom: 1px solid #404040;
+}
+#text {
+	width: 99.7%;
+	min-height: 200px;
+	padding-top: 4px;
+	padding-left: 2px;
+	overflow: auto;
+	font-size: 12px; 
+	font-family: "Verdana", "Tahoma", sans-serif;
+}
+#footer {
+	width: 798px;
+	height: 15px;
+	padding-right: 2px;
+	background-color: silver;
+	font-size: 10px;
+	font-family: "Verdana", "Tahoma", sans-serif;
+	border-top: 1px solid #404040;
+	margin-top: 0px;
+	text-align: right;
+}
 
-  #title  {
-  font-family : arial;
-   font-weight : bold;
-    font-size : large;
-          }
-    
-  #heading {
-  font-family : monospace;
-   font-style : normal;
-    font-weight : bold;
-     font-size : medium;
-           }
-    
-  #normal {
-   font-family : monospace;
-    font-style : normal;
-     font-weight : normal;
-      font-size : medium;
-          }
-   
-  #date {
-   font-family : arial;
-    font-style : normal;
-     font-weight : lighter;
-      font-size : small;
-        }
- 
-  #post-date {
-   font-family : monospace;
-    font-style : normal;
-     font-weight : normal;
-      font-size : x-small;
-             }
- 
-  #valid {
-   font-family : arial;
-    font-style : normal; 
-     font-weight : lighter;
-      font-size : x-small;
-         }
+/* Text and links */
 
-  #version {
-   font-family : arial;
-    font-style : normal; 
-     font-weight : lighter;
-      font-size : small;
-	   }
-
-  #locale {
-   font-family : arial;
-    font-style : normal; 
-     font-weight : lighter;
-      font-size : xx-small;
-	  }
-
-     body {
-      background-color : white;
-          }
-
-          hr {
-           height: 1px
-             }
+p {
+	font-family: "Verdana", "Tahoma", sans-serif;
+	margin: 0;
+	font-size: 12px;
+}
