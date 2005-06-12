@@ -12,11 +12,11 @@
   /* zer.php holds all our variables and data */
   /* If it exists we'll include it */
       if ( file_exists('php/zer.php') ) 
-         include 'php/zer.php'
+         include 'php/zer.php';
 
   /* We also include the silent modules */
       if ( file_exists('modules/silent_mod.php') )
-	 include 'modules/silent_mod.php'
+	 include 'modules/silent_mod.php';
 
   /* ENABLE THE MIN/MAX-FUNCTION */
 
@@ -94,7 +94,7 @@ echo $now; ?>
 </div>
 <!-- Footer -->
 <div id="footer">
-<?php echo $tag ?> using <?php echo $php_version ?>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux.rwarforums.com/blog/utveckling/css/layout.css">CSS</a>
+<?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>
 </div>
 <!-- End -->
 </div>

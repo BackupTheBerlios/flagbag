@@ -23,8 +23,8 @@
   /* The page title and also the first header-element is set here */
   $title = "flagbag 0.5.1";
 
-  /* Controls if the ./img/logo.png should be used or if just the $title should. */
-  $use_logo = 1;
+  /* URL to the blog */
+  $url = "http://linux.rwarforums.com/blog";
 
   /* CRITICAL VARIABLES */
   /* These variables are critical because they are used by more than one page */
