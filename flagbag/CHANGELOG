@@ -1,3 +1,17 @@
+CHANGELOG for flagbag version 0.5.1 => 0.5.5
+============================================
+
+* New layouting and CSS.
+
+* Fixed some minor bugs.
+
+* Index.php now has a more lighter element-
+  design.
+
+* Cleaned up zer.php from scratch.
+
+* Code is now more well-commented.
+
 CHANGELOG for flagbag version 0.5 => 0.5.1
 ==========================================
 
