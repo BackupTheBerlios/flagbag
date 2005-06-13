@@ -1,0 +1,32 @@
+Versioning of file-releases related to the flagbag project
+==========================================================
+
+After alot of thinking, I, the admin of the project thought
+that the following versioning-method is most suitable for
+our current needs:
+
+MAJOR.MINOR.FIX
+
+For example: 0.5.5
+ What this really means is:
+
+ o Not yet a fully completed major-release).
+ 
+ o Lots of minor fixes has been done (layouting, comments, re-structure, etc)
+
+ o Lots of bug-fixes and re-design to avoid problems in the future.
+
+IMPORTANT: Keep in mind that the FIX-versions don't have to be fully
+           compatible with each other under the same MINOR-version.
+           Although any MINOR-version should have more or less all
+           structures in common. This means that 0.5.1 and 0.5.5 is
+           don't need to have the same layouting but they do need to
+           have the same publishing-system in order to fit in for the
+           user. THIS IS VERY IMPORTANT!
+
+The CVS-server versioning should only be used on single files in case of 
+backup needs.
+
+Niklas Lindblad
+niklas.lindblad@gmail.com
+Administrator of the flagbag project
