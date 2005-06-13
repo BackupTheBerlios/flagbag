@@ -12,4 +12,7 @@
        	when rendering multipel elements.
 	
 	DECLARED MODULES TO BE USED */
+	echo "[ ";
+	include 'modules/singel_element.php';
+	echo " ]";
 ?>
