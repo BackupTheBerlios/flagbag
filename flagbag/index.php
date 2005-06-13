@@ -90,7 +90,9 @@ echo $now; ?>
 			    if ( file_exists('modules/element_mod.php') )
 			    	include 'modules/element_mod.php';
 		    }
-	   }
+                if ( file_exists('modules/element_mod.php') )
+         		include 'modules/element_mod.php';
+	 }
    }	       
 ?>
 </div>
