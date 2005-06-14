@@ -21,7 +21,7 @@
         $style_sheet = "css/layout.css";
 
   /* The page title and also the first header-element is set here */
-  $title = "flagbag 0.5.1";
+  $title = "flagbag 0.5.5";
 
   /* URL to the blog */
   $url = "http://linux.rwarforums.com/blog";
@@ -32,7 +32,7 @@
 
 
   /* CURRENT VERSION OF THE ENGINE */
-  $tag = "flagbag 0.5.1";
+  $tag = "flagbag 0.5.5";
 
   /* A variable for time is declared */  
   $tmp_now = strftime("%Aen %d %B %Y %H:%M:%S");
