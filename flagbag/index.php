@@ -87,7 +87,6 @@ echo $now; ?>
 		   $lines5 = file("contain/blog$numb");
 		    foreach ($lines5 as $line_num5 => $line5) {
 			    echo $line5;
-			    /*echo "<br/>";*/
 		    }
                 if ( file_exists('modules/element_mod.php') )
          		include 'modules/element_mod.php';
