@@ -24,7 +24,7 @@
   $title = "flagbag 0.5.5";
 
   /* URL to the blog */
-  $url = "http://linux.rwarforums.com/blog";
+  $url = "http://raider.behid.net/dev/flagbag/";
 
   /* CRITICAL VARIABLES */
   /* These variables are critical because they are used by more than one page */
