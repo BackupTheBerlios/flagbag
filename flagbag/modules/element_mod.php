@@ -15,4 +15,5 @@
 	echo "[ ";
 	include 'modules/singel_element.php';
 	echo " ]";
+	include 'modules/bukat_element.php';
 ?>
