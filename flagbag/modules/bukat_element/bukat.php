@@ -59,6 +59,7 @@ echo $now; ?>
 		$filename_tharb = "contain/$next_id.$get_max.blog";
 		if (!file_exists($filename_tharb) ) {
 			$tharb_file = fopen($filename_tharb, "x");
+			$get_text = ereg_replace("\n", "<br />\n",$get_text);
 			$string = "<br/><br/><p class=\"post-date\">$now</p>\n<p class=\"normal\">$get_text</p>";
 			$tmp = fputs($tharb_file, $string);
 			fclose($tharb_file);
