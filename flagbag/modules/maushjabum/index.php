@@ -38,16 +38,16 @@ echo $now; ?>
 <!-- End -->
 <!-- Text -->
 <div id="text">
-<table>
-	<form name="add" method="get" action="save.php">
-	<tr><td><kbd><? echo $msg_title; ?>: </kbd></td><td><input type="text" name="title" size=40 maxlength=200></td></tr>
-	<tr><td><kbd><? echo $msg_time; ?>: </kbd></td><td><input type="text" name="time" size=40 maxlength=200 value="<? echo $now; ?>"></td></tr>
-	<tr><td><kbd><? echo $msg_pwd; ?> </kbd></td><td><input type="password" name="pwd" size=40 maxlength=200></td></tr>
+<form method="get" action="save.php">
+	<table>
+	<tr><td><kbd><? echo $msg_title; ?>: </kbd></td><td><input type="text" name="title" size="40" maxlength="200"/></td></tr>
+	<tr><td><kbd><? echo $msg_time; ?>: </kbd></td><td><input type="text" name="time" size="40" maxlength="200" value="<? echo $now; ?>"/></td></tr>
+	<tr><td><kbd><? echo $msg_pwd; ?> </kbd></td><td><input type="password" name="pwd" size="40" maxlength="200"/></td></tr>
 	<tr><td><kbd><? echo $msg_blogg;?>: </kbd></td><td>
-	<textarea name="text" ROWS=20 cols="40"></textarea></td></tr>
-	<tr><th colspan=2><input type="submit" value="<? echo $msg_add; ?>"></th></tr>
-	</form>
-</table>
+	<textarea name="text" rows="20" cols="40"></textarea></td></tr>
+	<tr><td colspan="2"><input type="submit" value="<? echo $msg_add; ?>"/></th></tr>
+	</table>
+</form>
 	
 </div>
 <!-- Footer -->
