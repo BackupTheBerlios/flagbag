@@ -40,10 +40,10 @@ echo $now; ?>
 <div id="text">
 <?php
 	 // Fetch the variables
- 	 $get_title = $_GET['title'];
-         $get_time = $_GET['time'];
-	 $get_pwd = md5($_GET['pwd']);
-	 $get_text = $_GET['text'];
+ 	 $get_title = $_POST['title'];
+         $get_time = $_POST['time'];
+	 $get_pwd = md5($_POST['pwd']);
+	 $get_text = $_POST['text'];
 
 	 
 	 // Fetch the next ID
@@ -70,11 +70,10 @@ echo $now; ?>
 	
  	 // Save the data if it was ok. 
 	 if ($md5_ok == true) {
+		 $get_text = ereg_replace("\n", "<br />\n",$get_text);
 		 $filename = "../../contain/blog".$next_id;
 		 $blog_file = fopen($filename, "x");
-		 $string = "<p class=\"heading\"><b>".$get_title."</b></p>\n";
-		 $string .= "<p class=\"post-date\">".$get_time."</p>\n";
-		 $string .= "<p class=\"normal\">".$get_text."</p>\n";
+		 $string = "<p class=\"heading\"><b>".$get_title."</b></p>\n<p class=\"post-date\">".$get_time."</p>\n<p class=\"normal\">".$get_text."</p>\n";
 		 $tmp = fputs($blog_file, $string);
 		 fclose($blog_file);
 		 
@@ -90,7 +89,9 @@ echo $now; ?>
 			echo $msg_save_fail;
 		}
 	 }
-?>	
+?>
+<br/>
+<a href="<? echo $url ?>?max=<? echo $next_id; ?>&amp;min=<? echo $next_id; ?>"><? echo $msg_goto_blog; ?></a> - <a href="<? echo $url ?>"><? echo $msg_goto_main; ?></a>
 </div>
 <!-- Footer -->
 <div id="footer">

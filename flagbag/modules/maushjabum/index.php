@@ -38,7 +38,7 @@ echo $now; ?>
 <!-- End -->
 <!-- Text -->
 <div id="text">
-<form method="get" action="save.php">
+<form method="post" action="save.php">
 	<table>
 	<tr><td><kbd><? echo $msg_title; ?>: </kbd></td><td><input type="text" name="title" size="40" maxlength="200"/></td></tr>
 	<tr><td><kbd><? echo $msg_time; ?>: </kbd></td><td><input type="text" name="time" size="40" maxlength="200" value="<? echo $now; ?>"/></td></tr>
