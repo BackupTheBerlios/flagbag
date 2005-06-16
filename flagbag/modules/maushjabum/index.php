@@ -45,7 +45,7 @@ echo $now; ?>
 	<tr><td><kbd><? echo $msg_pwd; ?> </kbd></td><td><input type="password" name="pwd" size="40" maxlength="200"/></td></tr>
 	<tr><td><kbd><? echo $msg_blogg;?>: </kbd></td><td>
 	<textarea name="text" rows="20" cols="40"></textarea></td></tr>
-	<tr><td colspan="2"><input type="submit" value="<? echo $msg_add; ?>"/></th></tr>
+	<tr><th colspan="2"><input type="submit" value="<? echo $msg_add; ?>"/></th></tr>
 	</table>
 </form>
 	
