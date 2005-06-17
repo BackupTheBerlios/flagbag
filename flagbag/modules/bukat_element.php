@@ -8,7 +8,7 @@
 		include 'modules/bukat_element/tharb.php';
 		?>
 
-		<form method="get" action="modules/bukat_element/bukat.php">
+		<form method="post" action="modules/bukat_element/bukat.php">
 			<table>
 			<tr><td><kbd><? echo $msg_comment;?>: </kbd></td></tr>
 			<tr><td>

@@ -40,8 +40,8 @@ echo $now; ?>
 <div id="text">
 	<?php
 		/* Recive the comment and store it */
-		$get_text = $_GET['text'];
-		$get_max = $_GET['max'];
+		$get_text = $_POST['text'];
+		$get_max = $_POST['max'];
 		$text_when = $now;
 		$filename_index = "contain/$get_max.blog";
 		
