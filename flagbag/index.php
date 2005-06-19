@@ -83,12 +83,14 @@ echo $now; ?>
 
    for ( $numb = $max ; $numb >= $min ; $numb-- ) {
 	   if (file_exists("contain/blog$numb") ) {
+		   echo "<div class=\"post-container\"";
 		   $lines5 = file("contain/blog$numb");
 		    foreach ($lines5 as $line_num5 => $line5) {
 			    echo $line5;
 		    }
                     if ( file_exists('modules/element_mod.php') )
                     	   include 'modules/element_mod.php';
+		    echo "</div>";
 	   }
    }	       
 ?>
