@@ -30,13 +30,13 @@
 <head>
   <title><?php /* Print title */ echo $title; ?></title>
 <link rel="stylesheet" type="text/css" href="<?php /* Set CSS */ echo $style_sheet; ?>" title="layout" />
-      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 	
 <body>
 <div id="container">
 <!-- Title and menu -->
-<div id="header">
+
 <div id="title">
 <?php /* Echo title */
 echo $title; ?>
@@ -48,7 +48,6 @@ echo $now; ?>
 </div>
 <!-- End -->
 <!-- Text -->
-<div id="text">
 <?php
  
   /* BLOG-ARTICLES PRINTING */
@@ -87,20 +86,14 @@ echo $now; ?>
 		   $lines5 = file("contain/blog$numb");
 		    foreach ($lines5 as $line_num5 => $line5) {
 			    echo $line5;
-			    /*echo "<br/>";*/
 		    }
-                if ( file_exists('modules/element_mod.php') )
-         		include 'modules/element_mod.php';
-	 }
+	   }
    }	       
 ?>
-</div>
 <!-- Footer -->
 <div id="footer">
 <?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>
 </div>
 <!-- End -->
-</div>
-
 </body>
 </html>
