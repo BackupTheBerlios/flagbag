@@ -73,7 +73,7 @@ echo $now; ?>
 		 $get_text = ereg_replace("\n", "<br />\n",$get_text);
 		 $filename = "../../contain/blog".$next_id;
 		 $blog_file = fopen($filename, "x");
-		 $string = "<p class=\"heading\"><b>".$get_title."</b></p>\n<p class=\"post-date\">".$get_time."</p>\n<p class=\"normal\">".$get_text."</p>\n";
+		 $string = "<div class=\"post-container\">\n<p class=\"heading\"><b>".$get_title."</b></p>\n<p class=\"post-date\">".$get_time."</p>\n<p class=\"normal\">".$get_text."</p>\n</div>\n";
 		 $tmp = fputs($blog_file, $string);
 		 fclose($blog_file);
 		 
