@@ -83,7 +83,7 @@ echo $now; ?>
 
    for ( $numb = $max ; $numb >= $min ; $numb-- ) {
 	   if (file_exists("contain/blog$numb") ) {
-		   echo "<div class=\"post-container\"";
+		   echo "<div class=\"post-container\">";
 		   $lines5 = file("contain/blog$numb");
 		    foreach ($lines5 as $line_num5 => $line5) {
 			    echo $line5;
