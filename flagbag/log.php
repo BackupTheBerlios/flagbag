@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv"> 
 <?php
 /* Include the logger itself */
 /* This page only displays the output from php/logger.php */
@@ -8,12 +9,23 @@ include 'php/zer.php';
 ?>
 <head>
 <title> Log for <?php echo $title ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" type="text/css" href="<?php /* Load CSS */ echo $style_sheet ?>" title="layout" />
 </head>
 <body>
-<p id="title">Log for <?php echo $title ?></p>
-<hr />
+<div id="container">
+<!-- Title and menu -->
+
+<div id="title">
+<?php /* Echo title */
+echo 'Log for '; echo $title; ?>
+</div>
+<div id="date">
+<?php /* Echo date */
+echo $now; ?>
+</div>
+</div>
+<div class="post-container">
 <table>
 <?php
 /* Log-file created by php/logger.php
@@ -27,9 +39,12 @@ include 'php/zer.php';
   }
   ?>
 </table>
+</div>
 <hr />
-<p id="version"><?php echo $tag ?> using <?php echo $php_version ?></p>
-<p id="valid"><i>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a>and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux.rwarforums.com/blog/utveckling/css/layout.css">CSS</a></i></p>
-<p id="locale"><?php echo $client ?></p>
+<div id="footer">
+<?php echo $tag ?> using <?php echo $php_version ?>
+<i>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a>and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://linux.rwarforums.com/blog/utveckling/css/layout.css">CSS</a></i>
+<?php echo $client ?>
+</div>
 </body>
 </html>
