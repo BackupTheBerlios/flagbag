@@ -46,6 +46,15 @@ echo $title; ?>
 echo $now; ?>
 </div>
 </div>
+<!-- Menu_mod -->
+<?php
+/* If the menu_mod exists load it (displays a menu at the top of the page */
+if ( file_exists('modules/menu_mod.php') ) {
+	echo "<div id=\"menu\">";
+	include 'modules/menu_mod.php';
+	echo "</div>";
+ }
+?>
 <!-- End -->
 <!-- Text -->
 <?php
