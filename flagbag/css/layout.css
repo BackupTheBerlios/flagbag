@@ -17,11 +17,6 @@ body {
 	padding: 0px;
 	border: 1px solid #404040;
 }
-/*#header {
-	width: 100%;
-	height: 48px;
-	background-color: silver;
-}*/
 #title {
 	width: 100%;
 	height: 28px;
@@ -53,11 +48,6 @@ div.post-container {
 #footer {
 	width: 798px;
 	height: 15px;
-/*	position: relative;
-	left: 50%;
-	margin-bottom: 5px;	
-	margin-left: -400px;
-	float: left;	*/		
 	padding-right: 2px;
 	background-color: silver;
 	font-size: 10px;
