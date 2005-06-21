@@ -21,10 +21,14 @@
         $style_sheet = "css/layout.css";
 
   /* The page title and also the first header-element is set here */
-  $title = "flagbag 0.5.5";
+  $title = "flagbag 0.6";
 
   /* URL to the blog */
+<<<<<<< zer.php
+  $url = "http://localhost";
+=======
   $url = "http://raider.behid.net/dev/flagbag/";
+>>>>>>> 1.4
 
   /* CRITICAL VARIABLES */
   /* These variables are critical because they are used by more than one page */
@@ -32,10 +36,10 @@
 
 
   /* CURRENT VERSION OF THE ENGINE */
-  $tag = "flagbag 0.5.5";
+  $tag = "flagbag 0.6";
 
   /* A variable for time is declared */  
-  $tmp_now = strftime("%Aen %d %B %Y %H:%M:%S");
+  $tmp_now = strftime("%A %d %B %Y %H:%M:%S");
   /* The usable variable is made out of the one above */
   $now = ucwords($tmp_now);
 
