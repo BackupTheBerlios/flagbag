@@ -15,17 +15,16 @@
 
   /* The real HTML-code starts below, remember that <html> is already opened */
 ?>
-    
 <head>
-  <title><?php /* Print title */ echo $title; ?></title>
+<title><?php /* Print title */ echo $title; ?></title>
 <link rel="stylesheet" type="text/css" href="<?php /* Set CSS */ echo $style_sheet; ?>" title="layout" />
-      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
-	
+
 <body>
 <div id="container">
 <!-- Title and menu -->
-<div id="header">
+
 <div id="title">
 <?php /* Echo title */
 echo $title; ?>
@@ -33,11 +32,12 @@ echo $title; ?>
 <div id="date">
 <?php /* Echo date */
 echo $now; ?>
+	
 </div>
 </div>
 <!-- End -->
 <!-- Text -->
-<div id="text">
+<div class="post-container">
 <form method="post" action="save.php">
 	<table>
 	<tr><td><kbd><? echo $msg_title; ?>: </kbd></td><td><input type="text" name="title" size="40" maxlength="200"/></td></tr>
@@ -49,7 +49,6 @@ echo $now; ?>
 	</table>
 </form>
 	
-</div>
 <!-- Footer -->
 <div id="footer">
 <?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>

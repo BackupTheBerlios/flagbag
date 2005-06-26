@@ -23,7 +23,7 @@
 </head>
 	
 <body>
-<div id="container">
+<div class="post-container">
 <!-- Title and menu -->
 <div id="header">
 <div id="title">
