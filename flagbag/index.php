@@ -1,17 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11DTD/xhtml11.dtd">
-<HTML XMLNS="http://www.w3.org/1999/xhtml" XML:LANG="sv"> 
-<?PHP
-  /* THIS WON'T BE DISPLAYED ALONG WITH THE XHTML-CODE, ALL 
-     TEXT INSIDE THE '<?php'-TAGS ARE FOR YOUR EYES ONLY.
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv">
+<?php
+  /* THIS WON'T BE DISPLAYED ALONG WITH THE XHTML-CODE, ALL */
+  /* TEXT INSIDE THE '<?php'-TAGS ARE FOR YOUR EYES ONLY. */
      
-     THE FOLLOWING CODE IS LICENSED UNDER THE GNU GENERAL PUBLIC LICENSE VERSION 2.
-     YOU MAY MODIFY AND DISTRIBUTE IT UNDER THE TERMS OF THE LICENSE. FULL LICENSE
-     CAN BE FOUND HERE: http://www.gnu.org/licenses/gpl.txt
+  /* THE FOLLOWING CODE IS LICENSED UNDER THE GNU GENERAL PUBLIC LICENSE VERSION 2. */
+  /* YOU MAY MODIFY AND DISTRIBUTE IT UNDER THE TERMS OF THE LICENSE. FULL LICENSE */
+  /* CAN BE FOUND HERE: http://www.gnu.org/licenses/gpl.txt */
      
-     THIS FILE IS A PART OF THE FLAGBAG BLOG-ENGINE PROJECT: http://developer.berlios.de/projects/flagbag
+  /* THIS FILE IS A PART OF THE FLAGBAG BLOG-ENGINE PROJECT: http://developer.berlios.de/projects/flagbag */
      
-     COPYRIGHT (C) 2005 THE DEVELOPERS OF FLAGBAG
-  */
+  /* COPYRIGHT (C) 2005 THE DEVELOPERS OF FLAGBAG */
      
   /* BEGIN INCLUDES */
 
@@ -33,21 +32,18 @@
   /* END READING VARIABLES */
   
   
-  /* END INCLUDES
+  /* END INCLUDES */
 ?>
-
 
 <!-- =============== -->
 <!-- HEAD TAG BEGINS -->
 <!-- =============== -->
 
-<HEAD>
-  <TITLE><?php echo $title; ?></TITLE>
-<LINK REL="stylesheet" TYPE="text/css" HREF="<?php echo $style_sheet; ?>" TITLE="layout" />
-      <!-- BEGIN OF META TAG -->
-      <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
-      <!-- END OF META TAG -->
-</HEAD>
+<head> 
+<title><?php /* Print title */ echo $title; ?></title>
+<link rel="stylesheet" type="text/css" href="<?php /* Set CSS */ echo $style_sheet; ?>" title="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
 	
 <!-- ============= -->
 <!-- HEAD TAG ENDS -->
@@ -58,33 +54,33 @@
 <!-- BODY BEGINS -->
 <!-- =========== -->
 
-<BODY>
+<body>
 
 <!-- ================ -->
 <!-- CONTAINER BEGINS -->
 <!-- ================ -->
 
-<DIV ID="container">
+<div id="container">
 
 <!-- PRINTING PAGE TITLE -->
-<DIV ID="title">
+<div id="title">
 <?php echo $title; ?>
-</DIV>
+</div>
 <!-- DONE PRINTING PAGE TITLE -->
 
 <!-- PRINTING CURRENT DATE -->
-<DIV ID="date">
+<div id="date">
 <?php echo $now; ?>
-</DIV>
+</div>
 <!-- DONE PRINTING CURRENT DATE -->
 
-</DIV>
+</div>
 
 <!-- ============== -->
 <!-- CONTAINER ENDS -->
 <!-- ============== -->
 
-<?PHP
+<?php
   /* MENU PRINTING BEGINS */
   /* THE FOLLOWING CODE WILL LOAD THE MODULE THAT HANDLES THE MENUS, AGAIN, ONLY IF IT EXISTS */
 
@@ -94,13 +90,15 @@ if ( file_exists('modules/menu_mod.php') ) {
         echo "<!-- MENUS BEGINS -->\n";
         echo "<!-- ============ -->\n";
         echo "\n";
-	echo "<DIV ID=\"menu\">\n";
+	echo "<div id=\"menu\">\n";
 	include 'modules/menu_mod.php';
-	echo "</DIV>";
+	echo "</div>\n";
 	echo "\n";
 	echo "<!-- ========== -->\n";
         echo "<!-- MENUS ENDS -->\n";
         echo "<!-- ========== -->\n";
+        echo "\n";
+        echo "\n";
  }
 
    /* END OF MENU PRINTING */ 
@@ -140,22 +138,18 @@ if ( file_exists('modules/menu_mod.php') ) {
    
    for ( $numb = $max ; $numb >= $min ; $numb-- ) {
 	   if (file_exists("contain/blog$numb") ) {
-	                   echo "<!-- =============== -->\n";
-                           echo "<!-- ARTICLES BEGINS -->\n";
-                           echo "<!-- =============== -->\n";
+                           echo "<!-- ARTICLE $numb -->\n";
                            echo "\n";
-		   echo "<DIV CLASS=\"post-container\">";
+		   echo "<div class=\"post-container\">";
 		   $lines5 = file("contain/blog$numb");
 		    foreach ($lines5 as $line_num5 => $line5) {
 			    echo $line5;
 		    }
                     if ( file_exists('modules/element_mod.php') )
                     	   include 'modules/element_mod.php';
-		    echo "</DIV>";
+		    echo "</div>";
 		    echo "\n";
-		    echo "<!-- ============= -->\n";
-                    echo "<!-- ARTICLES ENDS -->\n";
-                    echo "<!-- ============= -->\n";
+                    echo "<!-- ARTICLES $numb ENDS -->\n";
                     echo "\n";
                     }
    }	       
@@ -164,19 +158,19 @@ if ( file_exists('modules/menu_mod.php') ) {
 <!-- SITE FOOTER BEGINS -->
 <!-- ================== -->
 
-<DIV ID="footer">
-<?php echo $tag ?> using <?php echo $php_version ?> and Valid<a href="http://validator.w3.org/check?uri=referer"> XHTML 1.1</a> and<a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>"> CSS</a>
-</DIV>
+<div id="footer">
+<?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>
+</div>
 
 <!-- ================ -->
 <!-- SITE FOOTER ENDS -->
 <!-- ================ -->
 
 
-</BODY>
+</body>
 
 <!-- ========= -->
 <!-- BODY ENDS -->
 <!-- ========= -->
 
-</HTML>
+</html>
