@@ -53,9 +53,9 @@ echo $now; ?>
 		 $next_id++;
 	 }
 	 // Read the md5sum (php biatch version)
-	 if (file_exists("shaparbalaum.blog") ) {
-		 $md5_file = file("shaparbalaum.blog");
-		 $md5_sum = md5(ereg_replace("\n", "", $md5_file[0])); // FIXME
+	 if (file_exists("$passwd_file") ) {
+		 $md5_file = file("$passwd_file");
+		 $md5_sum = ereg_replace("\n", "", $md5_file[0]); // FIXME
 	 }
 
 	 // Check if the pwd was rigth
