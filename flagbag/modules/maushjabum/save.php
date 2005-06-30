@@ -90,6 +90,7 @@ echo $now; ?>
 		}
 	 }
 ?>
+</div>
 <br/>
 <a href="<? echo $url ?>?max=<? echo $next_id; ?>&amp;min=<? echo $next_id; ?>"><? echo $msg_goto_blog; ?></a> - <a href="<? echo $url ?>"><? echo $msg_goto_main; ?></a>
 </div>
@@ -97,8 +98,5 @@ echo $now; ?>
 <div id="footer">
 <?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>
 </div>
-<!-- End -->
-</div>
-
 </body>
 </html>

@@ -51,13 +51,10 @@ echo $now; ?>
 	<tr><th colspan="2"><input type="submit" value="<? echo $msg_apply; ?>"/></th></tr>
 	</table>
 </form>
-	
+</div>	
 <!-- Footer -->
 <div id="footer">
 <?php echo $tag ?> using <?php echo $php_version ?> and Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=<?php echo $url ?>">CSS</a>
 </div>
-<!-- End -->
-</div>
-
 </body>
 </html>
