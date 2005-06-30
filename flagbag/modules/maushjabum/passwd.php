@@ -37,23 +37,18 @@ echo $now; ?>
 </div>
 <div id="menu">
 [ <a href="<? echo $url; ?>"><? echo $msg_goto_main; ?></a> ]
-<?php if ($set_passwd==1) {
-		echo "[ <a href=\"passwd.php\">$msg_menu_pasw</a> ]";
-	}
-?>
+[ <? echo "$msg_menu_pasw"; ?> ]
 
 </div>
 <!-- End -->
 <!-- Text -->
 <div class="post-container">
-<form method="post" action="save.php">
+<form method="post" action="svpwd.php">
 	<table>
-	<tr><td><kbd><? echo $msg_title; ?>: </kbd></td><td><input type="text" name="title" size="40" maxlength="200"/></td></tr>
-	<tr><td><kbd><? echo $msg_time; ?>: </kbd></td><td><input type="text" name="time" size="40" maxlength="200" value="<? echo $now; ?>"/></td></tr>
-	<tr><td><kbd><? echo $msg_pwd; ?> </kbd></td><td><input type="password" name="pwd" size="40" maxlength="200"/></td></tr>
-	<tr><td><kbd><? echo $msg_blogg;?>: </kbd></td><td>
-	<textarea name="text" rows="20" cols="40"></textarea></td></tr>
-	<tr><th colspan="2"><input type="submit" value="<? echo $msg_add; ?>"/></th></tr>
+	<tr><td><kbd><? echo $msg_pwd_old; ?>: </kbd></td><td><input type="password" name="oldpwd" size="40" maxlength="200"/></td></tr>
+	<tr><td><kbd><? echo $msg_pwd_new; ?>: </kbd></td><td><input type="password" name="newpwd0" size="40" maxlength="200"/></td></tr>
+	<tr><td><kbd><? echo $msg_pwd_new_re; ?> </kbd></td><td><input type="password" name="newpwd1" size="40" maxlength="200"/></td></tr>
+	<tr><th colspan="2"><input type="submit" value="<? echo $msg_apply; ?>"/></th></tr>
 	</table>
 </form>
 	
