@@ -24,11 +24,7 @@
   $title = "flagbag 0.6";
 
   /* URL to the blog */
-<<<<<<< zer.php
   $url = "http://localhost";
-=======
-  $url = "http://raider.behid.net/dev/flagbag/";
->>>>>>> 1.4
 
   /* CRITICAL VARIABLES */
   /* These variables are critical because they are used by more than one page */
